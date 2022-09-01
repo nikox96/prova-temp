@@ -1,0 +1,30 @@
+#Application Config
+application:
+  listino: 1
+
+# ==============================================================
+# = Actuator parameters
+# ==============================================================
+management:
+  info:
+    env:
+      enabled: true
+  endpoint:
+    health:
+      show-details: WHEN_AUTHORIZED
+  endpoints: #per esporre tutti gli endpoint
+    web:
+      exposure:
+        include: health,info,metrics,customInfo
+
+# ==============================================================
+# = Actuator info
+# ==============================================================
+info:
+  assistenza:
+    nome: "Nicolò Rossi"
+    mail: "nicolo.rossi@biters.it"
+    sito: "biters.it"
+  nome:
+    nome-app: "PriceArt Web Service - Versione OAuth 2.0"
+  profilo: GitHub
