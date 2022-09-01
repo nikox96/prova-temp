@@ -1,6 +1,7 @@
 #Application Config
 application:
   listino: 1
+  sconto: 100
 
 # ==============================================================
 # = Actuator parameters
@@ -15,16 +16,17 @@ management:
   endpoints: #per esporre tutti gli endpoint
     web:
       exposure:
-        include: health,info,metrics,customInfo
+        include: health,info,metrics,customInfo,refresh,bus-refresh
 
 # ==============================================================
 # = Actuator info
 # ==============================================================
 info:
   assistenza:
-    nome: "Nicolò Rossi"
+    nome: "NicolÃ² Rossi"
     mail: "nicolo.rossi@biters.it"
     sito: "biters.it"
   nome:
     nome-app: "PriceArt Web Service - Versione OAuth 2.0"
   profilo: GitHub
+  variante: sconto
